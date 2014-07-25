@@ -1,0 +1,7 @@
+#!/bin/sh
+echo tags update for $PWD
+ctags -f ~/.tags/tags --fields=+l --c-kinds=+p --c++-kinds=+p --extra=+q -R $PWD 
+ctags -a ~/.tags/tags --fields=+l --c-kinds=+p --c++-kinds=+p --extra=+q -R /usr/include/ 
+ctags -a ~/.tags/tags --fields=+l --c-kinds=+p --c++-kinds=+p --extra=+q -R /usr/local/include/ 
+#ctags -R /usr/include/ --fields=+l --c-kinds=+p --c++-kinds=+p --extra=+q -a 
+#ctags -R /usr/include --fields=+l --c-kinds=+p --c++-kinds=+p --extra=+q 
